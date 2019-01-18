@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{.Team}} Zoom Meetings</title>
+<style>
+body {
+  color: rgba(0,0,0,.87);
+  -webkit-font-feature-settings: "kern","liga";
+  font-feature-settings: "kern","liga";
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+hr {
+  border: 5px solid #3f51b5;
+  border-radius: 5px;
+}
+section {
+  margin-left: 3em;
+}
+</style>
+</head>
+<body>
+
+<h1>{{.Team}} Zoom Meetings</h1>
+
+{{range .Categories}}
+<hr />
+
+<section>
+<h2>{{.Name}}</h2>
+
+<ul>{{range $name, $id := .Mapping}}
+  <li>{{$name}}: <a href="/{{$name}}">{{$id}}</a></li>
+{{end}}</ul>
+</section>
+{{end}}
+
+
+</body>
+</html><Paste>

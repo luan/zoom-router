@@ -1,0 +1,5 @@
+---
+applications:
+  - name: zoom-router
+    env:
+      GOVERSION: go1.11
